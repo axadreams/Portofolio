@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simply. — Hero Demo</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- bootstrap 5 -->
+   <link rel="stylesheet" href="./bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+
+   <!-- cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+</head>
+<body>
+  <!-- Hero -->
+  <section class="hero" role="img" aria-label="Pemandangan gunung bersalju">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1><span class="muted"></span><br><strong>Portofolio website</strong></h1>
+      <p class="lead">Wellcome to my Portofolio Website.</p>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+<section class="features">
+  <div class="container features-grid">
+    
+    <!-- Feature 1: About Me -->
+    <div class="feature-item">
+      <img src="77972f3d-4580-4dbc-8a70-f3633a757f22.jpg" alt="Foto Saya" class="feature-img">
+      <h3>About Me</h3>
+      <p>Perkenalan singkat saya di sini. Klik tombol di bawah untuk tahu lebih banyak.</p>
+      <button class="btn-info" onclick="toggleCard('about-card')">More Info</button>
+    </div>
+
+    <!-- Feature 2: Projects -->
+    <div class="feature-item">
+      <img src="podrecnik str 1.jpg" alt="Project Image" class="feature-img">
+      <h3>Projects</h3>
+      <p>Kumpulan karya dan proyek yang pernah saya buat. Klik untuk detail lebih lanjut.</p>
+      <button class="btn-info" onclick="toggleCard('projects-card')">More Info</button>
+    </div>
+
+    <!-- Feature 3: Skills -->
+    <div class="feature-item">
+      <img src="Programmer - Blank Poster.jpg" alt="Skills Image" class="feature-img">
+      <h3>Skills</h3>
+      <p>Keahlian saya di bidang programming, desain, dan lainnya. Klik untuk lihat detail.</p>
+      <button class="btn-info" onclick="toggleCard('skills-card')">More Info</button>
+    </div>
+
+  </div>
+
+<!-- Card About Me -->
+<div id="about-card" class="info-card">
+  <div class="card-content about-flex">
+    
+    <!-- Foto di kiri -->
+    <div class="about-img">
+      <img src="WhatsApp Image 2025-09-25 at 7.30.59 PM.jpeg" alt="Foto Saya">
+    </div>
+    
+    <!-- Teks di kanan -->
+    <div class="about-text">
+      <h3>About Me</h3>
+      <p>
+        Halo, saya Mohammad Luqman Arif Cahyono. Seorang Mahasiswa prodi informatika. 
+        Saya suka membuat website modern dan minimalis.
+      </p>
+
+      <!-- Sosial Media -->
+      <div class="social-icons">
+        <a href="https://instagram.com/username" target="https://www.instagram.com/versacenocarte?utm_source=qr&igsh=MTl0Z3dxNm11a3FyOA=="><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://facebook.com/username" target="https://www.facebook.com/share/16wsP6UfRH/"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://tiktok.com/@username" target="https://www.tiktok.com/@versacenocarte?_t=ZS-901RDbemi14&_r=1"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://github.com/username" target="_blank"><i class="fa-brands fa-github"></i></a>
+      </div>
+
+      <button class="btn-close" onclick="toggleCard('about-card')"></button>
+    </div>
+
+  </div>
+</div>
+
+
+
+<!-- Card Projects -->
+<div id="projects-card" class="info-card">
+  <div class="card-content">
+    <h3>Projects</h3>
+    <p>Saya pernah membuat projek berupa aplikasi berbasis php yakni pemantauan magang</p>
+    
+    <!-- Grid Foto Project -->
+    <div class="projects-grid">
+      <img src="WhatsApp Image 2025-09-25 at 7.46.39 PM.jpeg" alt="Project 1">
+    </div>
+
+    <button class="btn-close" onclick="toggleCard('projects-card')"></button>
+  </div>
+</div>
+
+
+  <!-- Card Skills -->
+<!-- Card Skills -->
+<div id="skills-card" class="info-card">
+  <div class="card-content">
+    <h3>Skills</h3>
+    <p>Saya menguasai 3 bahasa pemrograman berikut:</p>
+
+    <!-- Grid Skills -->
+    <div class="skills-grid">
+      <div class="skill-item">
+        <i class="fa-brands fa-php"></i>
+        <p>PHP</p>
+      </div>
+      <div class="skill-item">
+        <i class="fa-brands fa-python"></i>
+        <p>Python</p>
+      </div>
+      <div class="skill-item">
+        <i class="fa-solid fa-c"></i>
+        <p>C</p>
+      </div>
+    </div>
+
+    <button class="btn-close" onclick="toggleCard('skills-card')"></button>
+  </div>
+</div>
+
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <!-- Left -->
+    <div class="footer-left">
+      <p>Copyright © 2024 Company Name. All rights reserved.</p>
+      <a href="#">Terms of Service</a> | <a href="#">Privacy</a>
+    </div>
+
+</footer>
+
+<script>
+  function toggleCard(id) {
+    const card = document.getElementById(id);
+
+    if (!card.classList.contains("show")) {
+      // Tampilkan dengan animasi masuk
+      card.classList.remove("hide");
+      card.style.display = "flex";
+      card.classList.add("show");
+    } else {
+      // Animasi keluar lalu sembunyikan
+      card.classList.remove("show");
+      card.classList.add("hide");
+      setTimeout(() => {
+        card.style.display = "none";
+      }, 300); // sesuai durasi animasi fadeOut
+    }
+  }
+</script>
+
+
+
+</body>
+</html>
